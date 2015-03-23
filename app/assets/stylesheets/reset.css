@@ -1,0 +1,68 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                             
+	vertical-align: baseline;          
+	background: transparent;      
+	font-size: 100%;                     
+}
+header, nav, section, article, aside, footer {display: block;}
+a {                                      	    
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+table {						
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			
+} 
+input, select, button, textarea {
+	margin: 0; 				
+	font-size: 100%; 			
+}
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+	position:relative;
+	top:-3px;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+/* --------------- base ---------*/
+html {
+	overflow-y: scroll; 
+}
+input, select, button, textarea {
+	font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+}
+label, input[type="button"], input[type="submit"], button {
+	cursor: pointer; 
+}
+a, a:visited { 
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:focus, a:active {
+	outline:none;
+	text-decoration: none;
+}
+
+.left{float:left}.right{float:right}.hi{overflow:hidden}.clear{clear:both;float:none;}.clear_l{clear:left;}
+.margin_0{margin:0 !important}
+.t_left{text-align:left}.t_right{text-align:right}.t_center{text-align:center;}
+.bold{font-weight:bold;}.italic{font-style:italic;}.normal{font-weight:normal;}

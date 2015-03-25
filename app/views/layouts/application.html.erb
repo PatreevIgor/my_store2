@@ -1,14 +1,286 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MyStore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Название магазина</title>
+  <meta name="keywords" content="Название магазина">
+  <meta name="description" content="Название магазина">
+  
+  <!-- include favicon -->
+  
+  <link rel="icon" href="" type="image/x-icon">   
+  <link rel="shortcut icon" href="" type="image/x-icon">   
+  
+  <!-- /include favicon -->
+  
+  <!-- include css -->
+  <link rel="stylesheet" href="assets/reset.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="assets/style.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="assets/fancybox.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="assets/magiczoomplus.css" type="text/css" media="screen">
+  <!-- /include css -->
+
+  <script src="assets/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/jquery.nivo.slider.js"></script>
+  <script type="text/javascript" src="assets/superfish.js"></script>
+  <script type="text/javascript" src="assets/jClever.min.js"></script>
+  <script type="text/javascript" src="assets/jquery.jscrollpane.min.js"></script>
+  <script type="text/javascript" src="assets/jquery.cookie.js"></script>
+  <script type="text/javascript" src="assets/common_ru.js"></script>
+  <script type="text/javascript" src="assets/jquery.mousewheel.js"></script>
+  <script type="text/JavaScript" src="assets/magiczoomplus.js"></script>
+  <script type="text/javascript" src="assets/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="assets/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="assets/jquery.jcarousel-control.min.js"></script>
+  <script type="text/javascript" src="assets/common.js"></script>
+  <script type="text/javascript" src="assets/jquery.rating.pack.js"></script>
+
+
 </head>
+
 <body>
+  <div class="header">
+    <div class="header_in">
+      <div class="right">
+        <div class="phone left">
+          (495) 123-45-67
+        </div>
+        <!--
+        <div class="currensy_form left">
+          <form action="1.php" class="jClever">
+            <label for="currency_select" class="currensy_form__label">Валюта:</label>
+            <select name="currency:" id="currency_select" class="currensy_form__select">
+              <option value="1">Euro €</option>
+              <option value="2">US dollar $</option>
+            </select>
+            <input type="submit" class="currensy_form__submit" value="изменить">
+          </form>
+        </div>
+		-->
+      </div>
+      <div class="header__login">
+                
+            Добро пожаловать, Вы можете <a href="http://demo42150.myinsales.ru/client_account/contacts/new">Создать аккаунт</a> или <a href="http://demo42150.myinsales.ru/client_account/login">Войти</a>
+         
+      </div>     
+    </div>
+  </div>
+
+  <div class="wrapper">
+  <div class="middle">  
+    <div class="container">
+      <div class="content">
+        <div class="top_menu">
+          <ul class="top_menu__list sf-js-enabled sf-arrows">
+            <li class="top_menu__subli"><a href="http://demo42150.myinsales.ru/#" class="sf-with-ul">Онлайн магазин <span class="top_menu_ar"></span></a>
+              <ul class="top_menu__sub" style="display: none;">
+                
+                    <li><a href="http://demo42150.myinsales.ru/page/%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" title="Доставка" class="">Доставка</a></li>
+                
+              </ul>
+            </li>
+            
+                <li><a href="assets/Название магазина.html" title="Главная" class="active">Главная</a></li>
+            
+                <li><a href="http://demo42150.myinsales.ru/page/%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" title="Доставка" class="">Доставка</a></li>
+            
+                <li><a href="http://demo42150.myinsales.ru/blogs/blog" title="Новости" class="">Новости</a></li>
+            
+                <li><a href="http://demo42150.myinsales.ru/page/feedback" title="Контакты" class="">Контакты</a></li>
+            
+          </ul>
+        </div>
+        <div class="busket_search_c">
+          
+          <!-- busket -->
+          <div class="busket">
+  <a href="http://demo42150.myinsales.ru/cart_items" class="busket__title">Корзина:</a> у Вас <span class="busket__count">0</span> товаров
+</div>          
+          <!-- busket -->
+
+          <div class="search">
+            <form action="http://demo42150.myinsales.ru/search" method="get" class="search_check">
+              <input type="text" name="q" class="search_txt">
+              <input class="search_submit" type="submit" value="поиск">
+            </form>
+          </div>
+
+        </div>
+        
+        <div class="clear"></div>
+
+
+
+
 
 <%= yield %>
 
+
+
+      </div><!-- #content-->
+    </div><!-- #container-->
+
+    <div class="sideLeft">
+     
+        
+		<a class="logo" href="assets/Название магазина.html"><img src="assets/loaded_logo.png" alt="Название магазина"></a>
+		
+      <!-- left menu -->
+      <ul class="left_menu">
+
+  
+    <li><a href="/product1" class="">АВТОКЛАВЫ</a>
+      
+      
+    </li>
+  
+    <li><a href="http://demo42150.myinsales.ru/collection/instrumenty" class="">ИНСТРУМЕНТЫ</a>
+      
+      
+    </li>
+  
+    <li><a href="http://demo42150.myinsales.ru/collection/zaschita" class="">ЗАЩИТА</a>
+      
+      
+    </li>
+  
+    <li><a href="http://demo42150.myinsales.ru/collection/aksessuary" class="">АКСЕССУАРЫ</a>
+      
+      
+    </li>
+  
+    <li><a href="http://demo42150.myinsales.ru/collection/zapchasti" class="">ЗАПЧАСТИ</a>
+      
+      
+    </li>
+  
+    <li><a href="http://demo42150.myinsales.ru/collection/pitievye-sistemy" class="">ПИТЬЕВЫЕ СИСТЕМЫ</a>
+      
+      
+    </li>
+  
+
+</ul>      
+      <!-- /left menu -->
+
+      <!-- social block -->
+       <div class="social_block">
+        <h3 class="left_block_title">Следи за нами</h3>
+        <div class="social_block__list">
+          <a href="https://www.facebook.com/" class="social_block__link"><img src="assets/facebook.jpg" alt=""></a>
+          <a href="" class="social_block__link"><img src="assets/twitter.jpg" alt=""></a>
+          <a href="" class="social_block__link"><img src="assets/rss.jpg" alt=""></a>
+          <a href="" class="social_block__link"><img src="assets/youtube.jpg" alt=""></a>
+        </div>
+      </div>
+      <!-- /social block -->
+
+      <!-- login block -->
+      
+        <div class="login_block">
+  <h3 class="left_block_title">Личный кабинет</h3>
+  <form accept-charset="UTF-8" action="http://demo42150.myinsales.ru/client_account/session" method="post" class="login_form">
+    <input name="utf8" type="hidden" value="✓">
+    <input name="authenticity_token" type="hidden" value="0tEQHucyY3HHrMqpC2CGlVSw3hVxbDBb6JAnJprPhLo=">
+    <div class="login_form__item">
+      <input type="text" class="login_form__txt" value="E-mail" onfocus="if (this.value==&#39;E-mail&#39;) this.value=&#39;&#39;;" onblur="if (this.value==&#39;&#39;){this.value=&#39;E-mail&#39;}" id="email" name="email">
+    </div>
+    <div class="login_form__item">
+      <input type="password" class="login_form__txt" value="Password" onfocus="if (this.value==&#39;Password&#39;) this.value=&#39;&#39;;" onblur="if (this.value==&#39;&#39;){this.value=&#39;Password&#39;}" id="password" name="password">
+    </div>
+    <div class="login_form__item hi">
+      <input type="submit" name="commit" class="login_form__button" value="Войти">
+      <!-- <input id="remember" type="checkbox" name="remember" class="login_form__check" value="yes">
+      <label for="remember" class="login_form__lb">Remember Me</label> -->
+    </div>
+    <div class="login_form__item">          
+      <a href="http://demo42150.myinsales.ru/client_account/password/change">Восстановить пароль?</a>
+      <br>
+      <a href="http://demo42150.myinsales.ru/client_account/contacts/new" class="login_form__create">Зарегистрироваться</a>
+    </div>
+  </form>
+</div>
+      
+      <!-- / login block -->
+      
+      <!-- specials -->
+       
+           <!-- title arrow -->
+<div class="title_arrow">
+  Спецпредложение
+</div>
+<!-- / title arrow -->
+<!-- left product -->
+
+<form action="http://demo42150.myinsales.ru/cart_items" method="post" id="special_product_34472903">
+<input type="hidden" name="variant_id" value="34472903">
+<div class="product_block">
+  <p class="product_block__title"><a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds">8.6 DS</a></p>
+  <div class="product_block__img">
+    <a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds"><img src="assets/compact_Asset_125080.jpg" alt=""></a>
+  </div>
+  <div class="produc_block__price">
+    <span class="produc_block__price__now">48000&nbsp;руб</span>
+    <span class="produc_block__price__old">48200&nbsp;руб</span>
+  </div>
+  <div class="produc_block__description">
+    DS Series is the ultimate hybrid: part refined city bike, part adventurous trail ride. Fast 700c wheels, capable suspension, and a light, strong frame make DS the go-anywhere choice.
+  </div>
+  <div class="produc_block__buttons">
+    <span class="add_card_button">В корзину</span>
+    <a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds" class="product_details">Подробнее</a>
+  </div>
+</div>
+</form>
+
+<form action="http://demo42150.myinsales.ru/cart_items" method="post" id="special_product_34473620">
+<input type="hidden" name="variant_id" value="34473620">
+<div class="product_block">
+  <p class="product_block__title"><a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum">Bontrager Quantum</a></p>
+  <div class="product_block__img">
+    <a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum"><img src="assets/compact_108463.jpg" alt=""></a>
+  </div>
+  <div class="produc_block__price">
+    <span class="produc_block__price__now">2700&nbsp;руб</span>
+    <span class="produc_block__price__old">2800&nbsp;руб</span>
+  </div>
+  <div class="produc_block__description">
+    Available in up to four sizes for a tailored fit, Quantum features great ventilation, excellent coverage, and of course Bontrager's signature out-of-the-box comfort and incredible ease-of-use. A removable visor adds to the value of a helmet that feels just as at home on the trail as it does on the road.
+  </div>
+  <div class="produc_block__buttons">
+    <span class="add_card_button">В корзину</span>
+    <a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum" class="product_details">Подробнее</a>
+  </div>
+</div>
+</form>
+
+<!-- /left product -->
+          
+        
+      <!-- /specials -->
+
+    </div><!-- #sideLeft -->
+  
+  </div><!-- #middle-->
+
+  <div class="footer">
+    <div class="footer_menu">
+      
+      <ul class="footer_menu__list">
+        <li><a href="http://demo42150.myinsales.ru/#">Онлайн магазин</a></li>
+        
+          <li><a href="http://demo42150.myinsales.ru/page/feedback" title="Обратная связь" class="">Обратная связь</a></li>
+        
+      </ul>
+    </div>
+    <p class="copyright">Copyright © 2015 Название магазина</p>
+  </div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+
 </body>
+
+
+
 </html>

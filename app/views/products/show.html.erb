@@ -1,19 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="category_c">
+  <h1 class="category_title">Детальное описание</h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+  <div id="description_title">
+    <%= @product.title %>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div id="description">
+    <%= @product.description %>
+  </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
+
+<div id="picture_for_show_action">
+
+  <%= image_tag @product.image, :width => 300, :height => 400 %>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="back">
+  <%= link_to 'Вернуться', avtoklavs_path %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

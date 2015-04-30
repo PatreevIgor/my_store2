@@ -4,11 +4,14 @@ class ProductsController < ApplicationController
 
   def title
   end
-  
-  def product1
+
+  def avtoklavs
     @products = Product.all
   end
 
+  def detailed_description
+    @products = Product.all
+  end
   # GET /products
   # GET /products.json
   def index
@@ -18,7 +21,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    
+
   end
 
   # GET /products/new

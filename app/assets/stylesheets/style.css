@@ -402,9 +402,44 @@ float: left;}
 .quantity__txt--search{line-height: 30px;height: 30px;}
 
 .product_page__img__gallery li{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-  
+
   .discounts-list {margin-top: 20px;}
 .total-amount{
 margin-top: 7px;
 width: 200px;
       float: left;}
+
+#description{
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-left: 340px;
+  position: absolute;
+  text-align:justify;
+  font-size: 120%;
+}
+
+#description_title{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 340px;
+  position: absolute;
+  text-align: center;
+  font-family: Georgia, Times, “Times New Roman”, serif;
+  font-size: 250%;
+}
+
+#picture_for_show_action{
+    border: 3px double black; /* Параметры границы */
+    background: gray; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    width: 300px;
+    height: 400px;
+}
+
+.category_item__description_d{
+  text-align:justify;
+}
+
+.category_item__busket{
+color:red;
+}

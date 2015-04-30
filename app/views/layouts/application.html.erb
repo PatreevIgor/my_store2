@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+
   <title>Название магазина</title>
-  <meta name="keywords" content="Название магазина">
-  <meta name="description" content="Название магазина">
-  
-  <!-- include favicon -->
-  
-  <link rel="icon" href="" type="image/x-icon">   
-  <link rel="shortcut icon" href="" type="image/x-icon">   
-  
+
+	<%= stylesheet_link_tag "application", media: "all","data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application","data-turbolinks-track" => true %>
+	<%= csrf_meta_tag %>
+
   <!-- /include favicon -->
-  
+
   <!-- include css -->
-  <link rel="stylesheet" href="assets/reset.css" type="text/css" media="screen, projection">
-  <link rel="stylesheet" href="assets/style.css" type="text/css" media="screen, projection">
-  <link rel="stylesheet" href="assets/fancybox.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="assets/magiczoomplus.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/assets/reset.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/assets/style.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/assets/fancybox.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/assets/magiczoomplus.css" type="text/css" media="screen">
   <!-- /include css -->
 
   <script src="assets/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/jquery.nivo.slider.js"></script>
-  <script type="text/javascript" src="assets/superfish.js"></script>
-  <script type="text/javascript" src="assets/jClever.min.js"></script>
-  <script type="text/javascript" src="assets/jquery.jscrollpane.min.js"></script>
-  <script type="text/javascript" src="assets/jquery.cookie.js"></script>
-  <script type="text/javascript" src="assets/common_ru.js"></script>
-  <script type="text/javascript" src="assets/jquery.mousewheel.js"></script>
-  <script type="text/JavaScript" src="assets/magiczoomplus.js"></script>
-  <script type="text/javascript" src="assets/jquery.fancybox.js"></script>
-  <script type="text/javascript" src="assets/jquery.jcarousel.min.js"></script>
-  <script type="text/javascript" src="assets/jquery.jcarousel-control.min.js"></script>
-  <script type="text/javascript" src="assets/common.js"></script>
-  <script type="text/javascript" src="assets/jquery.rating.pack.js"></script>
+  <script type="text/javascript" src="/assets/jquery.nivo.slider.js"></script>
+  <script type="text/javascript" src="/assets/superfish.js"></script>
+  <script type="text/javascript" src="/assets/jClever.min.js"></script>
+  <script type="text/javascript" src="/assets/jquery.jscrollpane.min.js"></script>
+  <script type="text/javascript" src="/assets/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/assets/common_ru.js"></script>
+  <script type="text/javascript" src="/assets/jquery.mousewheel.js"></script>
+  <script type="text/JavaScript" src="/assets/magiczoomplus.js"></script>
+  <script type="text/javascript" src="/assets/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="/assets/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="/assets/jquery.jcarousel-control.min.js"></script>
+  <script type="text/javascript" src="/assets/common.js"></script>
+  <script type="text/javascript" src="/assets/jquery.rating.pack.js"></script>
 
 
 </head>
@@ -59,43 +56,51 @@
 		-->
       </div>
       <div class="header__login">
-                
+
             Добро пожаловать, Вы можете <a href="http://demo42150.myinsales.ru/client_account/contacts/new">Создать аккаунт</a> или <a href="http://demo42150.myinsales.ru/client_account/login">Войти</a>
-         
-      </div>     
+
+      </div>
     </div>
   </div>
 
   <div class="wrapper">
-  <div class="middle">  
+  <div class="middle">
     <div class="container">
       <div class="content">
         <div class="top_menu">
           <ul class="top_menu__list sf-js-enabled sf-arrows">
             <li class="top_menu__subli"><a href="http://demo42150.myinsales.ru/#" class="sf-with-ul">Онлайн магазин <span class="top_menu_ar"></span></a>
               <ul class="top_menu__sub" style="display: none;">
-                
+
                     <li><a href="http://demo42150.myinsales.ru/page/%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" title="Доставка" class="">Доставка</a></li>
-                
+
               </ul>
             </li>
-            
+
                 <li><a href="assets/Название магазина.html" title="Главная" class="active">Главная</a></li>
-            
+
                 <li><a href="http://demo42150.myinsales.ru/page/%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" title="Доставка" class="">Доставка</a></li>
-            
+
                 <li><a href="http://demo42150.myinsales.ru/blogs/blog" title="Новости" class="">Новости</a></li>
-            
+
                 <li><a href="http://demo42150.myinsales.ru/page/feedback" title="Контакты" class="">Контакты</a></li>
-            
+
           </ul>
         </div>
         <div class="busket_search_c">
-          
+
           <!-- busket -->
-          <div class="busket">
-  <a href="http://demo42150.myinsales.ru/cart_items" class="busket__title">Корзина:</a> у Вас <span class="busket__count">0</span> товаров
-</div>          
+          <div id="cart">
+	          <div class="busket">
+	  			<a href='/carts/<%= session[:cart_id] %>' class="busket__title">Корзина:</a> у Вас
+
+            <%= if @cart
+             @cart.count_item_cart
+             end %>
+
+             товаров
+			  </div>
+		  </div>
           <!-- busket -->
 
           <div class="search">
@@ -106,7 +111,7 @@
           </div>
 
         </div>
-        
+
         <div class="clear"></div>
 
 
@@ -121,46 +126,46 @@
     </div><!-- #container-->
 
     <div class="sideLeft">
-     
-        
-		<a class="logo" href="assets/Название магазина.html"><img src="assets/loaded_logo.png" alt="Название магазина"></a>
-		
+
+
+		<a class="logo" href="assets/Название магазина.html"><img src="/assets/loaded_logo.png" alt="Название магазина"></a>
+
       <!-- left menu -->
       <ul class="left_menu">
 
-  
-    <li><a href="/product1" class="">АВТОКЛАВЫ</a>
-      
-      
-    </li>
-  
-    <li><a href="http://demo42150.myinsales.ru/collection/instrumenty" class="">ИНСТРУМЕНТЫ</a>
-      
-      
-    </li>
-  
-    <li><a href="http://demo42150.myinsales.ru/collection/zaschita" class="">ЗАЩИТА</a>
-      
-      
-    </li>
-  
-    <li><a href="http://demo42150.myinsales.ru/collection/aksessuary" class="">АКСЕССУАРЫ</a>
-      
-      
-    </li>
-  
-    <li><a href="http://demo42150.myinsales.ru/collection/zapchasti" class="">ЗАПЧАСТИ</a>
-      
-      
-    </li>
-  
-    <li><a href="http://demo42150.myinsales.ru/collection/pitievye-sistemy" class="">ПИТЬЕВЫЕ СИСТЕМЫ</a>
-      
-      
-    </li>
-  
 
-</ul>      
+    <li><a href="/product1" class="">АВТОКЛАВЫ</a>
+
+
+    </li>
+
+    <li><a href="http://demo42150.myinsales.ru/collection/instrumenty" class="">ИНСТРУМЕНТЫ</a>
+
+
+    </li>
+
+    <li><a href="http://demo42150.myinsales.ru/collection/zaschita" class="">ЗАЩИТА</a>
+
+
+    </li>
+
+    <li><a href="http://demo42150.myinsales.ru/collection/aksessuary" class="">АКСЕССУАРЫ</a>
+
+
+    </li>
+
+    <li><a href="http://demo42150.myinsales.ru/collection/zapchasti" class="">ЗАПЧАСТИ</a>
+
+
+    </li>
+
+    <li><a href="http://demo42150.myinsales.ru/collection/pitievye-sistemy" class="">ПИТЬЕВЫЕ СИСТЕМЫ</a>
+
+
+    </li>
+
+
+</ul>
       <!-- /left menu -->
 
       <!-- social block -->
@@ -168,15 +173,15 @@
         <h3 class="left_block_title">Следи за нами</h3>
         <div class="social_block__list">
           <a href="https://www.facebook.com/" class="social_block__link"><img src="assets/facebook.jpg" alt=""></a>
-          <a href="" class="social_block__link"><img src="assets/twitter.jpg" alt=""></a>
-          <a href="" class="social_block__link"><img src="assets/rss.jpg" alt=""></a>
-          <a href="" class="social_block__link"><img src="assets/youtube.jpg" alt=""></a>
+          <a href="" class="social_block__link"><img src="/assets/twitter.jpg" alt=""></a>
+          <a href="" class="social_block__link"><img src="/assets/rss.jpg" alt=""></a>
+          <a href="" class="social_block__link"><img src="/assets/youtube.jpg" alt=""></a>
         </div>
       </div>
       <!-- /social block -->
 
       <!-- login block -->
-      
+
         <div class="login_block">
   <h3 class="left_block_title">Личный кабинет</h3>
   <form accept-charset="UTF-8" action="http://demo42150.myinsales.ru/client_account/session" method="post" class="login_form">
@@ -193,18 +198,18 @@
       <!-- <input id="remember" type="checkbox" name="remember" class="login_form__check" value="yes">
       <label for="remember" class="login_form__lb">Remember Me</label> -->
     </div>
-    <div class="login_form__item">          
+    <div class="login_form__item">
       <a href="http://demo42150.myinsales.ru/client_account/password/change">Восстановить пароль?</a>
       <br>
       <a href="http://demo42150.myinsales.ru/client_account/contacts/new" class="login_form__create">Зарегистрироваться</a>
     </div>
   </form>
 </div>
-      
+
       <!-- / login block -->
-      
+
       <!-- specials -->
-       
+
            <!-- title arrow -->
 <div class="title_arrow">
   Спецпредложение
@@ -217,7 +222,7 @@
 <div class="product_block">
   <p class="product_block__title"><a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds">8.6 DS</a></p>
   <div class="product_block__img">
-    <a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds"><img src="assets/compact_Asset_125080.jpg" alt=""></a>
+    <a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds"><img src="/assets/compact_Asset_125080.jpg" alt=""></a>
   </div>
   <div class="produc_block__price">
     <span class="produc_block__price__now">48000&nbsp;руб</span>
@@ -238,7 +243,7 @@
 <div class="product_block">
   <p class="product_block__title"><a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum">Bontrager Quantum</a></p>
   <div class="product_block__img">
-    <a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum"><img src="assets/compact_108463.jpg" alt=""></a>
+    <a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum"><img src="/assets/compact_108463.jpg" alt=""></a>
   </div>
   <div class="produc_block__price">
     <span class="produc_block__price__now">2700&nbsp;руб</span>
@@ -255,22 +260,22 @@
 </form>
 
 <!-- /left product -->
-          
-        
+
+
       <!-- /specials -->
 
     </div><!-- #sideLeft -->
-  
+
   </div><!-- #middle-->
 
   <div class="footer">
     <div class="footer_menu">
-      
+
       <ul class="footer_menu__list">
         <li><a href="http://demo42150.myinsales.ru/#">Онлайн магазин</a></li>
-        
+
           <li><a href="http://demo42150.myinsales.ru/page/feedback" title="Обратная связь" class="">Обратная связь</a></li>
-        
+
       </ul>
     </div>
     <p class="copyright">Copyright © 2015 Название магазина</p>

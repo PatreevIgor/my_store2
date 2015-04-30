@@ -3,29 +3,31 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
 	margin: 0;
 	padding: 0;
 	border: 0;
-	outline: 0;                             
-	vertical-align: baseline;          
-	background: transparent;      
-	font-size: 100%;                     
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-size: 100%;
 }
 header, nav, section, article, aside, footer {display: block;}
-a {                                      	    
+a {
 	margin:0;
 	padding:0;
 	font-size:100%;
 	vertical-align:baseline;
 	background:transparent;
 }
-table {						
-	border-collapse: collapse; 
+table {
+	border-collapse: collapse;
 	border-spacing: 0;
+	border: 1px double black;
 }
 td, td img {
-	vertical-align: top;			
-} 
+	vertical-align: top;
+	border: 1px double black;
+}
 input, select, button, textarea {
-	margin: 0; 				
-	font-size: 100%; 			
+	margin: 0;
+	font-size: 100%;
 }
 
 input[type="radio"] {
@@ -43,15 +45,15 @@ sup {
 }
 /* --------------- base ---------*/
 html {
-	overflow-y: scroll; 
+	overflow-y: scroll;
 }
 input, select, button, textarea {
 	font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
 }
 label, input[type="button"], input[type="submit"], button {
-	cursor: pointer; 
+	cursor: pointer;
 }
-a, a:visited { 
+a, a:visited {
 	text-decoration: none;
 }
 a:hover {

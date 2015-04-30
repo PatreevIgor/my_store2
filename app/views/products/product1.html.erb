@@ -10,16 +10,7 @@
   <!-- category list -->
   <div class="category__list category_view_c visible">
     <% @products.each do |product| %>
-        <%= product.title %>
-        <%= product.description %>
-        <%= product.price %>
-        <%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <p>
-
-       <div class="category_item">
-    
+ 	     <div class="category_item">
       <input type="hidden" name="variant_id" value="34472833">
       <input type="hidden" name="quantity" class="quantity_input_form qwt2" value="1">
       <div class="category_item__img_c">
@@ -43,7 +34,7 @@
           <input type="hidden" name="quantity" class="quantity_input_form qwt2" value="1">
         </div>
         <div class="category_item__busket">
-          <%= button_to 'Добавить в корзину', line_items_path(product_id: product) %>
+          <%= button_to 'Добавить в корзину', line_items_path(product_id: product), remote: true %>
         </div>
       </div> 
       <div class="category_item__description">

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Telephone</th>
+      <th>Информация заказа</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.address %></td>
+        <td><%= order.telephone %></td>
+        <td><% for i in 0..(order.line_items.size-1) do %>
+        <strong>Продукт:</strong> <%= Product.find(order.line_items[i].product_id).title %>
+            Количество: <%= order.line_items[i].quantity %>
+            Дата: <%= order.line_items[i].updated_at %>
+        <br>
+        <% end %> </td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>

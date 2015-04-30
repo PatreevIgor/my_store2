@@ -1,9 +1,58 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
-<h2>Your Pragmatic Cart</h2>
-<ul>
-<% @cart.line_items.each do |item| %>
-<li><%= item.product.title %></li>
-<% end %>
-</ul>
+<div class="main_content">
+  <div class="breadcrumbs">
+    <a href="http://demo42150.myinsales.ru/">Главная</a> &gt;
+    <span>Корзина</span>
+  </div>
+
+  <div class="title_arrow title_arrow--content">Корзина</div>
+  <div class="busket__c">
+	  <script type="text/javascript" src="./корзина_files/cart.js"></script>
+	    <table class="cart-table">
+	      <thead>
+	        <tr><td>Наименование</td>
+	        <td>Цена</td>
+	        <td>Количество</td>
+	        <td>Общая цена</td>
+
+	      </tr></thead>
+	      <tbody>
+			  <% @cart.line_items.each do |item| %>
+
+		        <tr id="cart_order_line_34473390">
+		          <td>
+		            <a href="http://demo42150.myinsales.ru/product/abp-field-service-tool" class="cart-table__img"><%= image_tag item.product.image, :width => 90, :height => 90 %></a>
+		            <br>
+		            <a rel="nofollow" class="cart-table__name" href="http://demo42150.myinsales.ru/product/abp-field-service-tool"><%= item.product.title %></a>
+		          </td>
+
+		          <td>
+		            <span class="cart-table__price"><%= item.product.price %></span>
+		          </td>
+
+		          <td>
+					      <%= item.quantity %>
+		          </td>
+
+		          <td><span class="total-price"><%= item.total_price %></span></td>
+
+
+		        </tr>
+
+			  <% end %>
+	      </tbody>
+
+	      <thead>
+	        <tr><td>Итого:</td>
+	        <td></td>
+	        <td><%= @cart.count_item_cart %></td>
+	        <td><%= @cart.total_price %></td>
+
+	      </tr></thead>
+
+		</table>
+  </div>
+</div>
+
+	        <p>
+	        <%= button_to 'Очистить корзину', @cart, method: :delete, data: { confirm: 'Вы уверены?' } %>
+	        <%= button_to "Оформить заказ", new_order_path, method: :get %>

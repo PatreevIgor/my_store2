@@ -1,0 +1,2 @@
+// alert("111");
+$('#cart').html("<div class='busket'><a href='/carts/<%= session[:cart_id] %>' class='busket__title'>Корзина:</a> у Вас <%= @cart.count_item_cart %> товаров</div>");

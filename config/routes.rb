@@ -16,6 +16,11 @@ Rails.application.routes.draw do
   root 'products#title'
   get 'avtoklavs' => 'products#avtoklavs'
   get 'detailed_description' => 'products#detailed_description'
+  get 'shipping' => 'products#shipping'
+  get 'news' => 'products#news'
+  get 'contacts' => 'products#contacts'
+  get 'orders' => 'orders#index'
+  get 'title' => 'products#title'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

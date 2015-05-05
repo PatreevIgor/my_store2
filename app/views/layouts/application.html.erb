@@ -69,21 +69,42 @@
       <div class="content">
         <div class="top_menu">
           <ul class="top_menu__list sf-js-enabled sf-arrows">
-            <li class="top_menu__subli"><a href="http://demo42150.myinsales.ru/#" class="sf-with-ul">Онлайн магазин <span class="top_menu_ar"></span></a>
-              <ul class="top_menu__sub" style="display: none;">
 
-                    <li><a href="http://demo42150.myinsales.ru/page/%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" title="Доставка" class="">Доставка</a></li>
+<% if @active_link_title == true %>
+                <li><a href="/" title="Главная" class="active">Главная</a></li>
+<% else %>
+                <li><a href="/" title="Главная" class="">Главная</a></li>
+<% end %>
 
-              </ul>
-            </li>
 
-                <li><a href="assets/Название магазина.html" title="Главная" class="active">Главная</a></li>
+<% if @active_link_shipping == true %>
+                <li><a href="/shipping" title="Главная" class="active">Доставка</a></li>
+<% else %>
+                <li><a href="/shipping" title="Главная" class="">Доставка</a></li>
+<% end %>
 
-                <li><a href="http://demo42150.myinsales.ru/page/%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" title="Доставка" class="">Доставка</a></li>
 
-                <li><a href="http://demo42150.myinsales.ru/blogs/blog" title="Новости" class="">Новости</a></li>
+<% if @active_link_news == true %>
+                <li><a href="/news" title="Доставка" class="active">Новости</a></li>
+<% else %>
+                <li><a href="/news" title="Доставка" class="">Новости</a></li>
+<% end %>
 
-                <li><a href="http://demo42150.myinsales.ru/page/feedback" title="Контакты" class="">Контакты</a></li>
+
+<% if @active_link_recipes == true %>
+                <li><a href="/orders" class="active">Заказы</a></li>
+<% else %>
+                <li><a href="/orders" class="">Заказы</a></li>
+<% end %>
+
+
+<% if @active_link_contacts == true %>
+                <li><a href="/contacts" class="active">Контакты</a></li>
+<% else %>
+                <li><a href="/contacts" class="">Контакты</a></li>
+<% end %>
+
+
 
           </ul>
         </div>
@@ -128,7 +149,7 @@
     <div class="sideLeft">
 
 
-		<a class="logo" href="assets/Название магазина.html"><img src="/assets/loaded_logo.png" alt="Название магазина"></a>
+		<img src="/assets/loaded_logo.jpg" alt="Название магазина"></a>
 
       <!-- left menu -->
       <ul class="left_menu">
@@ -172,91 +193,29 @@
 
       <!-- login block -->
 
-        <div class="login_block">
-  <h3 class="left_block_title">Личный кабинет</h3>
-  <form accept-charset="UTF-8" action="http://demo42150.myinsales.ru/client_account/session" method="post" class="login_form">
-    <input name="utf8" type="hidden" value="✓">
-    <input name="authenticity_token" type="hidden" value="0tEQHucyY3HHrMqpC2CGlVSw3hVxbDBb6JAnJprPhLo=">
-    <div class="login_form__item">
-      <input type="text" class="login_form__txt" value="E-mail" onfocus="if (this.value==&#39;E-mail&#39;) this.value=&#39;&#39;;" onblur="if (this.value==&#39;&#39;){this.value=&#39;E-mail&#39;}" id="email" name="email">
-    </div>
-    <div class="login_form__item">
-      <input type="password" class="login_form__txt" value="Password" onfocus="if (this.value==&#39;Password&#39;) this.value=&#39;&#39;;" onblur="if (this.value==&#39;&#39;){this.value=&#39;Password&#39;}" id="password" name="password">
-    </div>
-    <div class="login_form__item hi">
-      <input type="submit" name="commit" class="login_form__button" value="Войти">
-      <!-- <input id="remember" type="checkbox" name="remember" class="login_form__check" value="yes">
-      <label for="remember" class="login_form__lb">Remember Me</label> -->
-    </div>
-    <div class="login_form__item">
-      <a href="http://demo42150.myinsales.ru/client_account/password/change">Восстановить пароль?</a>
-      <br>
-      <a href="http://demo42150.myinsales.ru/client_account/contacts/new" class="login_form__create">Зарегистрироваться</a>
-    </div>
-  </form>
-</div>
-
-      <!-- / login block -->
-
-      <!-- specials -->
-
-           <!-- title arrow -->
-<div class="title_arrow">
-  Спецпредложение
+        <div class="title_arrow">
+Рецепты
 </div>
 <!-- / title arrow -->
 <!-- left product -->
 
-<form action="http://demo42150.myinsales.ru/cart_items" method="post" id="special_product_34472903">
-<input type="hidden" name="variant_id" value="34472903">
+
+
 <div class="product_block">
-  <p class="product_block__title"><a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds">8.6 DS</a></p>
+
   <div class="product_block__img">
-    <a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds"><img src="/assets/compact_Asset_125080.jpg" alt=""></a>
+    <a href=""><img src="/assets/compact_Asset_125080.jpg" alt=""></a>
   </div>
-  <div class="produc_block__price">
-    <span class="produc_block__price__now">48000&nbsp;руб</span>
-    <span class="produc_block__price__old">48200&nbsp;руб</span>
-  </div>
-  <div class="produc_block__description">
-    DS Series is the ultimate hybrid: part refined city bike, part adventurous trail ride. Fast 700c wheels, capable suspension, and a light, strong frame make DS the go-anywhere choice.
-  </div>
-  <div class="produc_block__buttons">
-    <span class="add_card_button">В корзину</span>
-    <a href="http://demo42150.myinsales.ru/collection/specials/product/86-ds" class="product_details">Подробнее</a>
-  </div>
+
+
 </div>
-</form>
-
-<form action="http://demo42150.myinsales.ru/cart_items" method="post" id="special_product_34473620">
-<input type="hidden" name="variant_id" value="34473620">
-<div class="product_block">
-  <p class="product_block__title"><a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum">Bontrager Quantum</a></p>
-  <div class="product_block__img">
-    <a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum"><img src="/assets/compact_108463.jpg" alt=""></a>
-  </div>
-  <div class="produc_block__price">
-    <span class="produc_block__price__now">2700&nbsp;руб</span>
-    <span class="produc_block__price__old">2800&nbsp;руб</span>
-  </div>
-  <div class="produc_block__description">
-    Available in up to four sizes for a tailored fit, Quantum features great ventilation, excellent coverage, and of course Bontrager's signature out-of-the-box comfort and incredible ease-of-use. A removable visor adds to the value of a helmet that feels just as at home on the trail as it does on the road.
-  </div>
-  <div class="produc_block__buttons">
-    <span class="add_card_button">В корзину</span>
-    <a href="http://demo42150.myinsales.ru/collection/specials/product/bontrager-quantum" class="product_details">Подробнее</a>
-  </div>
-</div>
-</form>
-
-<!-- /left product -->
 
 
-      <!-- /specials -->
 
     </div><!-- #sideLeft -->
 
   </div><!-- #middle-->
+
 
   <div class="footer">
     <div class="footer_menu">

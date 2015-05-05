@@ -52,7 +52,15 @@
 		</table>
   </div>
 </div>
+<br>
 
-	        <p>
-	        <%= button_to 'Очистить корзину', @cart, method: :delete, data: { confirm: 'Вы уверены?' } %>
-	        <%= button_to "Оформить заказ", new_order_path, method: :get %>
+<div class="button_panel">
+
+	<div class="button_empty_cart">
+	  <%= button_to 'ОЧИСТИТЬ КОРЗИНУ', @cart, method: :delete, data: { confirm: 'Вы уверены?' }, :class => 'button' %>
+	</div>
+
+		<div class="button_create_order">
+		  <%= button_to "ОФОРМИТЬ ЗАКАЗ", new_order_path, method: :get, :class => 'button' %>
+		</div>
+</div>

@@ -3,15 +3,29 @@ class ProductsController < ApplicationController
   include CurrentCart
 
   def title
+    @active_link_title = true
+  end
+
+  def shipping
+    @active_link_shipping = true
+  end
+
+  def news
+    @active_link_news = true
+  end
+
+  def contacts
+    @active_link_contacts = true
+  end
+
+  def orders
+    @active_link_orders = true
   end
 
   def avtoklavs
     @products = Product.all
   end
 
-  def detailed_description
-    @products = Product.all
-  end
   # GET /products
   # GET /products.json
   def index

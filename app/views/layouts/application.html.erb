@@ -35,8 +35,12 @@
 		-->
       </div>
       <div class="header__login">
-
-            Добро пожаловать, Вы можете <a href="http://demo42150.myinsales.ru/client_account/contacts/new">Создать аккаунт</a> или <a href="http://demo42150.myinsales.ru/client_account/login">Войти</a>
+<% if user_signed_in? %>
+    <span>Здравствуйте, <%= current_user.email %></span>
+    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+<% else %>
+    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+<% end %>
 
       </div>
     </div>

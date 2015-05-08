@@ -1,11 +1,10 @@
 class OrdersController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart, only: [:new, :create, :index]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   # GET /orders
   # GET /orders.json
   def index
-    set_cart
     @orders = Order.all
     @active_link_orders = true
   end
@@ -38,7 +37,6 @@ class OrdersController < ApplicationController
         format.html { redirect_to title_url, notice: 'Спасибо за покупку!' }
         format.json { render :show, status: :created, location: @order }
       else
-        @cart = current_cart
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end

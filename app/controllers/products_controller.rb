@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   include CurrentCart
+  include Acses_denied
 
   def title
     @active_link_title = true
@@ -26,12 +27,13 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    acses_denied_for_action_index
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-
+    acses_denied_for_action_show
   end
 
   # GET /products/new
@@ -41,6 +43,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    acses_denied_for_action_edit
   end
 
   # POST /products

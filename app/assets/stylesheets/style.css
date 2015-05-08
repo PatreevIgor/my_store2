@@ -525,8 +525,5 @@ width: 200px;
 .product_block__img img{height: 210px;max-width: 210px;}
 
 .product_block{border: 1px solid #EAEAEA;margin-top: 10px;padding: 17px;}
-.text{
-
-font-size:15px;
-
-}
+.text{  }
+.title_text { text-align: center; color: red; font-size: 15px;}

@@ -5,7 +5,9 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    set_cart
     @orders = Order.all
+    @active_link_orders = true
   end
 
   # GET /orders/1

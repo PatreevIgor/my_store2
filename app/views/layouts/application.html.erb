@@ -35,13 +35,12 @@
 		-->
       </div>
       <div class="header__login">
-<% if user_signed_in? %>
-    <span>Здравствуйте, <%= current_user.email %></span>
-    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-<% else %>
-    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-<% end %>
-
+        <% if user_signed_in? %>
+            <span>Здравствуйте, <%= current_user.email %></span>
+            <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+        <% else %>
+            <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -74,7 +73,7 @@
 <% end %>
 
 
-<% if @active_link_recipes == true %>
+<% if @active_link_orders == true %>
                 <li><a href="/orders" class="active">Заказы</a></li>
 <% else %>
                 <li><a href="/orders" class="">Заказы</a></li>
@@ -87,8 +86,6 @@
                 <li><a href="/contacts" class="">Контакты</a></li>
 <% end %>
 
-
-
           </ul>
         </div>
         <div class="busket_search_c">
@@ -96,13 +93,9 @@
           <!-- busket -->
           <div id="cart">
 	          <div class="busket">
-	  			<a href='/carts/<%= session[:cart_id] %>' class="busket__title">Корзина:</a> у Вас
-
-            <%= if @cart
-             @cart.count_item_cart
-             end %>
-
-             товаров
+	  			<a href='/carts/<%= session[:cart_id] %>' class="busket__title">Корзина:</a> у Вас <%= if @cart
+                  @cart.count_item_cart
+                       end %> товаров
 			  </div>
 		  </div>
           <!-- busket -->

@@ -18,12 +18,8 @@ class ProductsController < ApplicationController
     @active_link_contacts = true
   end
 
-  def orders
-    @active_link_orders = true
-  end
-
   def avtoklavs
-    @products = Product.all
+    @products = Product.where(types: 'avtoklavs')
   end
 
   # GET /products
@@ -95,6 +91,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :description, :price, :image)
+      params.require(:product).permit(:title, :description, :price, :image, :types)
     end
 end

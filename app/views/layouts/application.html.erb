@@ -52,61 +52,60 @@
         <div class="top_menu">
           <ul class="top_menu__list sf-js-enabled sf-arrows">
 
-<% if @active_link_title == true %>
-                <li><a href="/" title="Главная" class="active">Главная</a></li>
-<% else %>
-                <li><a href="/" title="Главная" class="">Главная</a></li>
-<% end %>
+            <% if @active_link_title == true %>
+                            <li><a href="/" title="Главная" class="active">Главная</a></li>
+            <% else %>
+                            <li><a href="/" title="Главная" >Главная</a></li>
+            <% end %>
 
 
-<% if @active_link_shipping == true %>
-                <li><a href="/shipping" title="Главная" class="active">Доставка</a></li>
-<% else %>
-                <li><a href="/shipping" title="Главная" class="">Доставка</a></li>
-<% end %>
+            <% if @active_link_shipping == true %>
+                            <li><a href="/shipping" title="Главная" class="active">Доставка</a></li>
+            <% else %>
+                            <li><a href="/shipping" title="Главная" >Доставка</a></li>
+            <% end %>
 
 
-<% if @active_link_news == true %>
-                <li><a href="/news" title="Доставка" class="active">Новости</a></li>
-<% else %>
-                <li><a href="/news" title="Доставка" class="">Новости</a></li>
-<% end %>
+            <% if @active_link_news == true %>
+                            <li><a href="/news" title="Доставка" class="active">Новости</a></li>
+            <% else %>
+                            <li><a href="/news" title="Доставка" >Новости</a></li>
+            <% end %>
 
 
-<% if @active_link_orders == true %>
-                <li><a href="/orders" class="active">Заказы</a></li>
-<% else %>
-                <li><a href="/orders" class="">Заказы</a></li>
-<% end %>
+            <% if @active_link_orders == true %>
+                            <li><a href="/orders" class="active">Заказы</a></li>
+            <% else %>
+                            <li><a href="/orders" >Заказы</a></li>
+            <% end %>
 
 
-<% if @active_link_contacts == true %>
-                <li><a href="/contacts" class="active">Контакты</a></li>
-<% else %>
-                <li><a href="/contacts" class="">Контакты</a></li>
-<% end %>
-
+            <% if @active_link_contacts == true %>
+                            <li><a href="/contacts" class="active">Контакты</a></li>
+            <% else %>
+                            <li><a href="/contacts" >Контакты</a></li>
+            <% end %>
           </ul>
         </div>
         <div class="busket_search_c">
 
           <!-- busket -->
           <div id="cart">
-	          <div class="busket">
-	  			<a href='/carts/<%= session[:cart_id] %>' class="busket__title">Корзина:</a> у Вас <%= if @cart
-                  @cart.count_item_cart
-                       end %> товаров
-			  </div>
-		  </div>
-          <!-- busket -->
 
-          <div class="search">
-            <form action="http://demo42150.myinsales.ru/search" method="get" class="search_check">
-              <input type="text" name="q" class="search_txt">
-              <input class="search_submit" type="submit" value="поиск">
-            </form>
-          </div>
+            <div class="busket_image">
+              <a href="/carts/<%= session[:cart_id] %>"><img src="/assets/корзина.jpg" width="70" height="70" alt=""></a>
+            </div>
 
+
+
+            <div class="busket">
+              <div class="busket_text">
+      	  			<a href='/carts/<%= session[:cart_id] %>' class="busket__title">Корзина:</a> <br> у Вас <% if @cart %>
+                        <%= @cart.count_item_cart %>
+                        <% end %> товаров
+            </div>
+  			  </div>
+  		    </div>
         </div>
 
         <div class="clear"></div>
@@ -122,73 +121,33 @@
       </div><!-- #content-->
     </div><!-- #container-->
 
-    <div class="sideLeft">
+<div class="sideLeft">
+  <img src="/assets/loaded_logo.jpg" alt="Название магазина"></a>
+        <!-- left menu -->
+  <ul class="left_menu">
+      <li><a href="/avtoklavs" class="">АВТОКЛАВЫ</a>
+      </li>
+      <li><a href="" class="">ИНСТРУМЕНТЫ</a>
+      </li>
+      <li><a href="" class="">БЕНЗОКОСЫ</a>
+      </li>
+      <li><a href="" class="">АКСЕССУАРЫ</a>
+      </li>
+      <li><a href="" class="">ЗАПЧАСТИ</a>
+      </li>
+      <li><a href="" class="">ПИТЬЕВЫЕ СИСТЕМЫ</a>
+      </li>
+  </ul>
 
+  <div class="title_arrow">Новинки продаж</div>
 
-		<img src="/assets/loaded_logo.jpg" alt="Название магазина"></a>
-
-      <!-- left menu -->
-      <ul class="left_menu">
-
-
-    <li><a href="/avtoklavs" class="">АВТОКЛАВЫ</a>
-
-
-    </li>
-
-    <li><a href="http://demo42150.myinsales.ru/collection/instrumenty" class="">ИНСТРУМЕНТЫ</a>
-
-
-    </li>
-
-    <li><a href="http://demo42150.myinsales.ru/collection/zaschita" class="">ЗАЩИТА</a>
-
-
-    </li>
-
-    <li><a href="http://demo42150.myinsales.ru/collection/aksessuary" class="">АКСЕССУАРЫ</a>
-
-
-    </li>
-
-    <li><a href="http://demo42150.myinsales.ru/collection/zapchasti" class="">ЗАПЧАСТИ</a>
-
-
-    </li>
-
-    <li><a href="http://demo42150.myinsales.ru/collection/pitievye-sistemy" class="">ПИТЬЕВЫЕ СИСТЕМЫ</a>
-
-
-    </li>
-
-
-</ul>
-      <!-- /left menu -->
-
-
-
-      <!-- login block -->
-
-<div class="title_arrow">
-Новинки продаж
-</div>
-<!-- / title arrow -->
-<!-- left product -->
-
-
-
-<div class="product_block">
-
-  <div class="product_block__img">
-    <a href=""><img src="/assets/avtoklav_title.jpg" alt=""></a>
+  <div class="product_block">
+    <div class="product_block__img">
+      <a href="/avtoklavs"><img src="/assets/avtoklav_title.jpg" alt=""></a>
+    </div>
   </div>
 
-
-</div>
-
-
-
-    </div><!-- #sideLeft -->
+</div><!-- #sideLeft -->
 
   </div><!-- #middle-->
 
@@ -197,13 +156,13 @@
     <div class="footer_menu">
 
       <ul class="footer_menu__list">
-        <li><a href="http://demo42150.myinsales.ru/#">Онлайн магазин</a></li>
+        <li><a href="">Интеренет магазин</a></li>
 
-          <li><a href="http://demo42150.myinsales.ru/page/feedback" title="Обратная связь" class="">Обратная связь</a></li>
+          <li><a href="" class="">Обратная связь</a></li>
 
       </ul>
     </div>
-    <p class="copyright">Copyright © 2015 Название магазина</p>
+    <p class="copyright">Сайт изготовлен на Ruby on rails, 2015 г. Патреевым И.И. Тел.+37529 7379222</p>
   </div><!-- #footer -->
 
 </div><!-- #wrapper -->

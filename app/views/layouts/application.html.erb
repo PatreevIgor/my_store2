@@ -135,7 +135,8 @@
         <!-- left menu -->
   <ul class="left_menu">
       <% Product.get_massive_title_product.each do |product| %>
-        <li><a href="/<%= product %>" class=""><%= product %></a></li>
+    <!-- <li><a href="/<%= product %>" class=""><%= product %></a></li> -->
+        <li><%= link_to product, products_path(var: product) %></li>
       <% end %>
 
 
@@ -165,7 +166,11 @@
 
       </ul>
     </div>
-    <p class="copyright">Сайт изготовлен на Ruby on rails, 2015 г. Патреевым И.И. Телефоны: +37529 7379222 (МТС) или +37529 3319156 (VELCOM)</p>
+    <p class="copyright">
+    <ul class="footer_menu__list">
+    Сайт изготовлен на Ruby on rails, 2015 г.
+      <a href="http://patron.herokuapp.com/">Патреевым И.И.</a>
+    Телефоны: +37529 7379222 (МТС) или +37529 3319156 (VELCOM)</p>
   </div><!-- #footer -->
 
 </div><!-- #wrapper -->

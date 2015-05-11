@@ -18,7 +18,7 @@
 
   <div class="right">
     <div class="back">
-      <a href='/<%= @product.types %>'>Вернуться</a>
+      <%= link_to 'Вернуться', products_path(var: @product.types) %>
     </div>
   </div>
 

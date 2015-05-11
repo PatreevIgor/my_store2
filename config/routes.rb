@@ -23,8 +23,14 @@ Rails.application.routes.draw do
   get 'title' => 'products#title'
   get 'title' => 'products#title'
   get 'the_end_of_the_order' => 'orders#the_end_of_the_order'
-  get 'газовые колонки' => 'products#water_heaters'
-  get 'автоклавы' => 'products#avtoklavs'
+
+
+  # get 'газовые колонки' => 'products#water_heaters'
+  # get 'автоклавы' => 'products#avtoklavs'
+
+
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

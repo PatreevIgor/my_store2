@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   include CurrentCart
+  include Acses_denied
   before_action :set_cart, only: [:new, :create, :index]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   # GET /orders
@@ -34,7 +35,7 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        format.html { redirect_to title_url, notice: 'Спасибо за покупку!' }
+        format.html { redirect_to the_end_of_the_order_url}
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -65,6 +66,10 @@ class OrdersController < ApplicationController
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def the_end_of_the_order
+
   end
 
   private

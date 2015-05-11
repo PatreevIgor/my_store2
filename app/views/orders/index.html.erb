@@ -25,7 +25,7 @@
         <% for i in 0..(order.line_items.size-1) do %>
           <strong>Товар:</strong> <%= Product.find(order.line_items[i].product_id).title %>
           <strong>Количество:</strong> <%= order.line_items[i].quantity %>
-          <strong>Дата:</strong> <%= order.line_items[i].updated_at.localtime("+04:00").strftime("%m.%d.%Y в %H часов %M минут(ы)") %>
+          <strong>Дата:</strong> <%= order.line_items[i].updated_at.localtime("+03:00").strftime("%m.%d.%Y в %H часов %M минут(ы)") %>
           <br>
         <% end %>
 

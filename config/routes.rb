@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get 'contacts' => 'products#contacts'
   get 'orders' => 'orders#index'
   get 'title' => 'products#title'
+  get 'title' => 'products#title'
+  get 'the_end_of_the_order' => 'orders#the_end_of_the_order'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

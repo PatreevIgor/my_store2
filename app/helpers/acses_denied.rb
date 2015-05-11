@@ -1,9 +1,5 @@
 module Acses_denied
 
-    def admin_email
-      "patreewigor@yandex.ru"
-    end
-
     def acses_denied_for_action_index
       if current_user
         if current_user.email == admin_email

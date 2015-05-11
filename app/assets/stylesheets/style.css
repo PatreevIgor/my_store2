@@ -11,9 +11,7 @@ a{color: #f2041f;}
 .currensy_form__submit{background: #464545;border:none;color: #fff;display: inline-block;height: 22px;line-height: 22px;text-transform: uppercase;vertical-align: middle;}
 .currensy_form__submit:hover{background: #F2041F;}
 
-.header__login{color: #909090;font-size: 11px;}
-.header__login a{color: #F2041F;}
-.header__login a:hover{text-decoration: underline;}
+
 
 /*wrapper*/
 .wrapper{background: white;box-shadow: 0 0 10px #E1E1E1;margin: 20px auto;width: 970px;}
@@ -549,3 +547,10 @@ width: 200px;
 .right{
 float:right;
 }
+
+.header__login{padding-left: 10px; color: #909090;font-size: 11px;}
+.header__login a{color: #F2041F;}
+.header__login a:hover{text-decoration: underline;}
+
+
+.phone_left{padding-right: 10px;}

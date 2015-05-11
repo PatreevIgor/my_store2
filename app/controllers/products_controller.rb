@@ -33,7 +33,6 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    acses_denied_for_action_show
   end
 
   # GET /products/new

@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'products#title'
-  get 'avtoklavs' => 'products#avtoklavs'
   get 'detailed_description' => 'products#detailed_description'
   get 'shipping' => 'products#shipping'
   get 'news' => 'products#news'
@@ -24,6 +23,8 @@ Rails.application.routes.draw do
   get 'title' => 'products#title'
   get 'title' => 'products#title'
   get 'the_end_of_the_order' => 'orders#the_end_of_the_order'
+  get 'газовые колонки' => 'products#water_heaters'
+  get 'автоклавы' => 'products#avtoklavs'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

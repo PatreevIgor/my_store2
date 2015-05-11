@@ -2,9 +2,8 @@
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <link rel="shortcut icon" href="/assets/ico.ico" type="image/x-icon">
-  <title>Автоклавы в Минске, купить автоклав по низким ценам, дамашний автоклав для стерилизации консервов</title>
-
+  <link rel="shortcut icon" href="/assets/ICO.png" type="image/x-icon">
+  <title>Автоклавы в Минске, купить автоклав по низким ценам, дамашний автоклав для изготовления консервов</title>
 
   <%= stylesheet_link_tag "application", media: "all","data-turbolinks-track" => true %>
   <%= javascript_include_tag "application","data-turbolinks-track" => true %>
@@ -28,7 +27,7 @@
       <div class="right">
         <div class="phone_left">
           <div class="phone left">
-            +37529 737-9-222 (МТС) или +37529 331-91-56 (VELCOM)
+            Наши телефоны: +37529 737-9-222 (МТС) или +37529 331-91-56 (VELCOM)
           </div>
         </div>
         <!--
@@ -135,18 +134,12 @@
   <img src="/assets/loaded_logo.jpg" alt="Название магазина"></a>
         <!-- left menu -->
   <ul class="left_menu">
-      <li><a href="/avtoklavs" class="">АВТОКЛАВЫ</a>
-      </li>
-      <li><a href="" class="">ИНСТРУМЕНТЫ</a>
-      </li>
-      <li><a href="" class="">БЕНЗОКОСЫ</a>
-      </li>
-      <li><a href="" class="">АКСЕССУАРЫ</a>
-      </li>
-      <li><a href="" class="">ЗАПЧАСТИ</a>
-      </li>
-      <li><a href="" class="">ПИТЬЕВЫЕ СИСТЕМЫ</a>
-      </li>
+      <% Product.get_massive_title_product.each do |product| %>
+        <li><a href="/<%= product %>" class=""><%= product %></a></li>
+      <% end %>
+
+
+
   </ul>
 
   <div class="title_arrow">Новинки продаж</div>
@@ -172,7 +165,7 @@
 
       </ul>
     </div>
-    <p class="copyright">Сайт изготовлен на Ruby on rails, 2015 г. Патреевым И.И. Тел.+37529 7379222</p>
+    <p class="copyright">Сайт изготовлен на Ruby on rails, 2015 г. Патреевым И.И. Телефоны: +37529 7379222 (МТС) или +37529 3319156 (VELCOM)</p>
   </div><!-- #footer -->
 
 </div><!-- #wrapper -->

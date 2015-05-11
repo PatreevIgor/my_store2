@@ -1,0 +1,49 @@
+<div class="main_content">
+  <div class="breadcrumbs">
+    <a href="http://demo42150.myinsales.ru/">Главная</a> &gt;<span>АВТОКЛАВЫ</span>
+  </div>
+  <div class="category_c">
+    <h1 class="category_title">АВТОКЛАВЫ</h1>
+    <!-- category list -->
+    <div class="category__list category_view_c visible">
+      <% @products.each do |product| %>
+        <div class="category_item">
+          <input type="hidden" name="variant_id" value="34472833">
+          <input type="hidden" name="quantity" class="quantity_input_form qwt2" value="1">
+          <div class="category_item__img_c">
+            <a href="" class="category_item__img__link">
+              <%= image_tag product.image, :width => 100, :height => 110 %>
+            </a>
+          </div>
+          <div class="category_item__right">
+            <div class="category_item__price">
+              <span class="category_item__price__now total-price"><%= product.price %> руб</span>
+            </div>
+            <div class="category_item__quantity quantity">
+            </div>
+            <div class="category_item__busket">
+              <%= button_to 'Добавить в корзину', line_items_path(product_id: product),  remote: true, :class => 'button_product_list' %>
+            </div>
+          </div>
+          <div class="category_item__description">
+            <h3 class="category_item__title">
+            <a href=""><%= product.title %></a>
+          </h3>
+          <div class="category_item__description_d">
+            <%= product.description[0..145]+'...' %>
+          </div>
+          <div class="category_item__description__last">
+            <div class="category_item__description__details">
+              <%= link_to 'Детальное описание', product %>
+            </div>
+            <div class="star_rait">
+              <div class="star_rait_color" style="width:0.0%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

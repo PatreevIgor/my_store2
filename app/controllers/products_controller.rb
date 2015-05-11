@@ -20,7 +20,12 @@ class ProductsController < ApplicationController
   end
 
   def avtoklavs
-    @products = Product.where(types: 'avtoklavs')
+    @products = Product.where(types: 'автоклавы')
+  end
+
+  def water_heaters
+    @products = Product.where(types: 'газовые колонки')
+    @show_water_heaters = 'show_water_heaters'
   end
 
   # GET /products

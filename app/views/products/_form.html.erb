@@ -17,11 +17,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_area :image, rows: 1, cols: 137 %>
-  </div>
-
-  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description, rows: 10, cols: 137 %>
   </div>
@@ -33,9 +28,10 @@
     <%= f.label :types %><br>
     <%= f.text_area :types, rows: 1, cols: 137 %>
   </div>
-
-  <%= f.file_field :image %>
-
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

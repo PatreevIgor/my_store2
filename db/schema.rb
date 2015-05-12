@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150508092927) do
+ActiveRecord::Schema.define(version: 20150512053626) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -43,10 +43,14 @@ ActiveRecord::Schema.define(version: 20150508092927) do
     t.text     "title"
     t.text     "description"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "image"
     t.text     "types"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

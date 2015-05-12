@@ -420,11 +420,11 @@ width: 200px;
 }
 
 #picture_for_show_action{
-    border: 3px double black; /* Параметры границы */
-    background: gray; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-    width: 300px;
-    height: 400px;
+    border: 2px double black; /* Параметры границы */
+    background: #363636; /* Цвет фона */
+    padding: 5px; /* Поля вокруг текста */
+    width: 320px;
+    height: 420px;
 }
 
 .category_item__description_d{
@@ -554,3 +554,5 @@ float:right;
 
 
 .phone_left{padding-right: 10px;}
+
+.product_title{color: black;}

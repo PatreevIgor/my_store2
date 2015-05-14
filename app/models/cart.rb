@@ -23,8 +23,4 @@ class Cart < ActiveRecord::Base
 		item.quantity -= 1
 	end
 
-
-
-
-
 end

@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def title
     @active_link_title = true
-
+    ValueForSearch.create_value_for_search
   end
 
   def shipping

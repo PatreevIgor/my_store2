@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
 
   def title
     @active_link_title = true
+
   end
 
   def shipping
@@ -22,8 +23,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @var = params[:var]
-    @products = Product.where(types: @var)
+    @types = params[:types]
+    @products = Product.where(types: @types)
   end
 
   # GET /products/1

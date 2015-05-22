@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :value_for_searches
+
   devise_for :users
   resources :orders
 

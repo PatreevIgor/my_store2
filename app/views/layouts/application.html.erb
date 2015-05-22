@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Автоклавы в Минске, купить автоклав по низким ценам, дамашний автоклав для изготовления консервов</title>
+    <title><%= set_title_for_search %> </title>
 
     <link rel="shortcut icon" href="/assets/ICO.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/style.css" type="text/css" media="screen, projection">
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name='yandex-verification' content='65ee5e2e0f9917c3' />
     <meta name="google-site-verification" content="9SoZ4UGqHpVGsJ86WunwkBfhtKVm02WyWc0gCrskRzs" />
-    <meta name="description" content="Интернет магазин Intertron, продажа автоклавов в Минске и по Беларуси"/>
-    <meta name="keywords" content="автоклав, приспособление для консервирование, автоматическое консервирование, консервирование овощей, консервирование тушенки, автоклав в минске, дача, консервы, закатываем урожай, автоклав бытовой, дачные заготовки, зимние заготовки, домашний автоклав, автоклав для домашнего консервирования, автоклав своими руками, стерилизатор паровой, тушенка в автоклаве, овощи в атоклаве, варенье в автоклаве, грибы в автоклаве, автоклав видео, тушенка домашняя, как сделать тушенку, автоклавы домашние, автоклав газовый, автоклав электрический, автоклав инструкция, рецепты для автоклава, рыбные консервы в автоклаве, автоклав бу, автоклав б/у, Беларусь, купить, предложение, цена"/>
+    <meta name="description" content= "<%= set_description_for_search %>" />
+    <meta name="keywords" content= "<%= set_keywords_for_search %>" />
 
     <%= stylesheet_link_tag "application", media: "all","data-turbolinks-track" => true %>
     <%= javascript_include_tag "application","data-turbolinks-track" => true %>
@@ -38,7 +37,7 @@
               <input type="submit" class="currensy_form__submit" value="изменить">
             </form>
           </div>
-  		-->
+      -->
         </div>
         <div class="header__login">
           <% if user_signed_in? %>
@@ -96,12 +95,12 @@
                 </div>
                 <div class="busket">
                   <div class="busket_text">
-        	  			  <a href='/carts/<%= session[:cart_id] %>' class="busket__title">Корзина:</a> <br> у Вас <% if @cart %>
+                    <a href='/carts/<%= session[:cart_id] %>' class="busket__title">Корзина:</a> <br> у Вас <% if @cart %>
                     <%= @cart.count_item_cart %>
                     <% end %> товаров
                   </div>
-    			      </div>
-    		      </div>
+                </div>
+              </div>
             </div>
             <div class="clear"></div>
 
@@ -110,10 +109,17 @@
           </div>
         </div>
         <div class="sideLeft">
-          <img src="/assets/loaded_logo.jpg" alt="Название магазина"></a>
+          <img src="/assets/loaded_logo.jpg" alt="Название магазина">
             <ul class="left_menu">
+
+              <% if current_user %>
+                <% if current_user.email == admin_email %>
+                  <li><a href="/value_for_searches">ПРОДВИЖЕНИЕ</a></li>
+                <% end %>
+              <% end %>
+
               <% Product.get_massive_title_product.each do |product| %>
-                <li><%= link_to product, products_path(var: product) %></li>
+                <li><%= link_to product, products_path(types: product) %></li>
               <% end %>
             </ul>
           <div class="title_arrow">Новинки продаж</div>

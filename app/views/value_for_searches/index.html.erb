@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Value For Searches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Keywords</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @value_for_searches.each do |value_for_search| %>
+      <tr>
+        <td><%= value_for_search.product %></td>
+        <td><%= value_for_search.title %></td>
+        <td><%= value_for_search.description %></td>
+        <td><%= value_for_search.keywords %></td>
+        <td><%= link_to 'Show', value_for_search %></td>
+        <td><%= link_to 'Edit', edit_value_for_search_path(value_for_search) %></td>
+        <td><%= link_to 'Destroy', value_for_search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Value for search', new_value_for_search_path %>

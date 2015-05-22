@@ -56,13 +56,13 @@ a{color: #f2041f;}
 
 
 /* If an image is wrapped in a link */
-.nivoSlider a.nivo-imageLink {position:absolute;top:0px;left:0px;width:100%;height:100%;border:0;padding:0;margin:0;z-index:6;display:none;background:white;filter:alpha(opacity=0);opacity:0;}
+.nivoSlider a.nivo-imageLink {top:0px;left:0px;width:100%;height:100%;border:0;padding:0;margin:0;z-index:6;display:none;background:white;filter:alpha(opacity=0);opacity:0;}
 /* The slices and boxes in the Slider */
-.nivo-slice {display:block;position:absolute;z-index:5;height:100%;top:0;}
-.nivo-box {display:block;position:absolute;z-index:5;overflow:hidden;}
+.nivo-slice {display:block;z-index:5;height:100%;top:0;}
+.nivo-box {display:block;z-index:5;overflow:hidden;}
 .nivo-box img { display:block; }
 /* Caption styles */
-.nivo-caption {position:absolute;left:0px;bottom:0px;background:#000;color:#fff;width:100%;z-index:8;padding: 5px 10px;opacity: 0.8;overflow: hidden;display: none;
+.nivo-caption {left:0px;bottom:0px;background:#000;color:#fff;width:100%;z-index:8;padding: 5px 10px;opacity: 0.8;overflow: hidden;display: none;
   -moz-opacity: 0.8;
   filter:alpha(opacity=8);
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -424,7 +424,7 @@ width: 200px;
     background: #363636; /* Цвет фона */
     padding: 5px; /* Поля вокруг текста */
     width: 320px;
-    height: 420px;
+    height: 320px;
 }
 
 .category_item__description_d{
@@ -497,12 +497,11 @@ width: 200px;
 }
 .nivo-main-image {
   display: block !important;
-  position: relative !important;
+
   display: inline;
   height: 450px;
-  width: 700px;
+  width: 705px;
   border: 2px double red;
-  position: absolute;
   }
 
 .container {width: 100%;float: left;}
@@ -556,3 +555,21 @@ float:right;
 .phone_left{padding-right: 10px;}
 
 .product_title{color: black;}
+
+.main_content_text{
+  position: absolute;
+  color: red;
+  padding-top: 150px;
+  padding-right: 50px;
+  padding-left: 20px;
+  font-weight:normal;
+  letter-spacing:1pt;
+  word-spacing:4pt;
+  font-size:18px;
+  text-align:left;
+  font-family:times new roman, times, serif;
+  line-height:1;
+
+}
+
+

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @value_for_search.product %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @value_for_search.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @value_for_search.description %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @value_for_search.keywords %>
+</p>
+
+<%= link_to 'Edit', edit_value_for_search_path(@value_for_search) %> |
+<%= link_to 'Back', value_for_searches_path %>

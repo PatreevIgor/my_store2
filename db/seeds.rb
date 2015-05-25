@@ -33,6 +33,11 @@ Product.create(title: 'Neva 4511',
                price: '800000',
                types: 'газовые колонки')
 
+Product.create(title: 'УАЗ',
+               description: 'Отличное состояние, для рыбалки и охоты лучше не придумаешь',
+               price: '15000000',
+               types: 'автомобили')
+
 Product.create(title: 'САЙТ-ВИЗИТКА',
                description: 'Небольшой сайт, с информацией для личного пользования',
                price: '1000000',

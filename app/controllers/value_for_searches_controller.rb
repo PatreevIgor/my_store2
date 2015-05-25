@@ -4,8 +4,9 @@ class ValueForSearchesController < ApplicationController
   # GET /value_for_searches
   # GET /value_for_searches.json
   def index
-    @value_for_searches = ValueForSearch.all
     ValueForSearch.create_value_for_search
+    @value_for_searches = ValueForSearch.all
+
   end
 
   # GET /value_for_searches/1

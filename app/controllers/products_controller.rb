@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
 
   def title
     @active_link_title = true
-    ValueForSearch.create_value_for_search
   end
 
   def shipping
@@ -14,10 +13,6 @@ class ProductsController < ApplicationController
 
   def news
     @active_link_news = true
-  end
-
-  def contacts
-    @active_link_contacts = true
   end
 
   # GET /products

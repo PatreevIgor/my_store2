@@ -5,9 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+Order.delete_all
 Product.delete_all
 ValueForSearch.delete_all
+Location.delete_all
+
 Product.create(title: 'Автоклав на 30 литров',
                description: 'Предназначен для изготовления консервов, салатов, грибов или любых закаток в домашних условиях. Вместимость: 21 банка по 0,5 литра или 10 банок по 1 литру. Гарантия 1 год. Книга рецептов в подарок бесплатно.',
                price: '1350000',
@@ -75,4 +77,8 @@ ValueForSearch.create(product: 'автомобили',
                       description:'Дешевые автомобили бу',
                       keywords:'автомобиль бу, купить автомобиль, обмен автомобилей, проажа автомобилей, покупка автомобиля'
                       )
+
+Location.create( address: 'Покупка автоклавов',
+                 latitude: '54.01062486',
+                 longitude: '27.68152356')
 

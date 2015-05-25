@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'gmaps4rails'
+gem 'geocoder'
+
 gem 'paperclip'
 
 gem 'devise'

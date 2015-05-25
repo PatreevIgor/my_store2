@@ -225,7 +225,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .category_item__img_c{float: left;position:relative;width: 130px;}
 .category_item__img_c--smallgrid{margin-bottom: 10px;position:relative;width: 210px;}
-.category_item__img__link{background: #FFF;border: solid 1px #E5E5E5;display: block;height: 110px;line-height: 110px;padding: 10px;text-align: center;}
+.category_item__img__link{background: #FFF;border: solid 2px #E5E5E5;display: block;height: 130px;line-height: 110px;}
 .category_item__img__link--smallgrid{background: #FFF;border: solid 1px #E5E5E5;display: block;height: 190px;line-height: 190px;padding: 10px;text-align: center;}
 .category_item__img{max-height: 110px;margin: 0 auto;max-width: 110px;vertical-align: middle;}
 .category_item__img--smallgrid{max-height: 160px;margin: 0 auto;max-width: 160px;vertical-align: middle;}
@@ -394,37 +394,38 @@ float: left;}
 
 .product_page__img__gallery li{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
-  .discounts-list {margin-top: 20px;}
+.discounts-list {margin-top: 20px;}
 .total-amount{
-margin-top: 7px;
-width: 200px;
-      float: left;}
+  margin-top: 7px;
+  width: 200px;
+  float: left;
+}
 
 #description{
-  margin-top: 40px;
+  margin-top: 0px;
   margin-right: 10px;
-  margin-left: 340px;
-  position: absolute;
+  margin-left: 0px;
+
   text-align:justify;
   font-size: 120%;
 }
 
 #description_title{
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 340px;
-  position: absolute;
+  margin-bottom: 15px;
   text-align: center;
   font-family: Georgia, Times, “Times New Roman”, serif;
-  font-size: 250%;
+  font-size: 200%;
+  line-height: 1;
 }
 
-#picture_for_show_action{
-    border: 2px double black; /* Параметры границы */
+#img_for_show{
+ /* Параметры границы */
     background: #363636; /* Цвет фона */
     padding: 5px; /* Поля вокруг текста */
     width: 320px;
     height: 320px;
+    float: left;
+    margin-right: 10px;
 }
 
 .category_item__description_d{
@@ -495,6 +496,25 @@ width: 200px;
     border-radius: 8px;
     outline:none;
 }
+
+
+.link_product_list{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+    background-color:#363636;
+    display:inline-block;
+    font-family: 'Fjalla One', serif;
+    font-size: 10pt;
+    font-weight: 100;
+    text-align: center;
+    font-style: Times;
+    width: 140px;
+    height: 20px;
+    border-radius: 8px;
+    border: 2px double silver;
+}
+
 .nivo-main-image {
   display: block !important;
 
@@ -545,7 +565,13 @@ width: 200px;
 
 .right{
 float:right;
+padding-right: 10px;
 }
+
+.button_show{
+  padding-left: 400px;
+}
+
 
 .header__login{padding-left: 10px; color: #909090;font-size: 11px;}
 .header__login a{color: #F2041F;}

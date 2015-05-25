@@ -5,22 +5,23 @@
     <h1 class="category_title">Детальное описание</h1>
   </div>
 
-  <div id="description_title">
-    <%= @product.title %>
-  </div>
-
   <div id="description">
+    <div id="img_for_show">
+        <%= image_tag @product.image, :width => 320, :height => 320 %>
+    </div>
+    <div id="description_title">
+      <%= @product.title %>
+    </div>
     <%= @product.description %>
   </div>
 
-  <div id="picture_for_show_action">
-    <%= image_tag @product.image, :width => 320, :height => 320 %>
+  <div class="right">
+    <%= link_to 'Вернуться', products_path(types: @product.types), :class => 'link_product_list' %>
   </div>
 
-  <div class="right">
-    <div class="back">
-      <%= link_to 'Вернуться', products_path(var: @product.types) %>
-    </div>
+  <div class="button_show">
+    <%= button_to 'Добавить в корзину', line_items_path(product_id: @product),  remote: true, :class => 'button_product_list' %>
   </div>
 
 </div>
+

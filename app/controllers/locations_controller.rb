@@ -14,6 +14,8 @@ class LocationsController < ApplicationController
       marker.lat location.latitude
       marker.lng location.longitude
     end
+
+    @active_link_contacts = true
   end
 
   # GET /locations/1

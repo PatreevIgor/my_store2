@@ -82,9 +82,9 @@
                 <% end %>
 
                 <% if @active_link_contacts == true %>
-                  <li><a href="/locations" class="active">Контакты</a></li>
+                  <li><%= link_to 'Контакты', locations_path, class: 'active', 'data-no-turbolink' => true %></li>
                 <% else %>
-                  <li><a href="/locations" >Контакты</a></li>
+                  <li><%= link_to 'Контакты', locations_path, 'data-no-turbolink' => true %></li>
                 <% end %>
               </ul>
             </div>

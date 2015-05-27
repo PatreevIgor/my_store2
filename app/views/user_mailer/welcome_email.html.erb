@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>На сайте Intertron.by создан новый заказ:</h1>
+        <br>
+        <strong>ФИО:</strong><%= @order.name %>
+        <br>
+        <strong>Адрес:</strong><%= @order.address %>
+        <br>
+        <strong>Телефон:</strong><%= @order.telephone %>
+        <br>
+
+        <% for i in 0..(@order.line_items.size-1) do %>
+          <strong>Товар:</strong> <%= Product.find(@order.line_items[i].product_id).title %>
+          <strong>Количество:</strong> <%= @order.line_items[i].quantity %>
+          <strong>Дата:</strong> <%= (@order.line_items[i].updated_at + 3.hours).strftime("%m.%d.%Y в %H часов %M минут(ы)") %>
+          <br>
+        <% end %>
+    <p>Спасибо за внимание!</p>
+  </body>
+</html>

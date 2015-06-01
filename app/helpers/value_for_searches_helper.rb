@@ -1,11 +1,11 @@
 module ValueForSearchesHelper
 
   def default_title
-    'Интернет магазин Intertron, лучшие цены в Беларуси'
+    'Купить автоклав в Минске, Беларуси, интрнет магазин Intertron'
   end
 
   def default_description
-    'Интернет магазин Intertron, лучший интернет магазин в Беларуси'
+    'Купить автоклав в Минске, Беларуси, интрнет магазин Intertron'
   end
 
   def default_keywords

@@ -12,7 +12,7 @@
     <div id="description_title">
       <%= @product.title %>
     </div>
-    <%= @product.description %>
+    <%= @product.description.html_safe %>
   </div>
 
   <div class="right">

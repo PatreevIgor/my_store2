@@ -31,7 +31,7 @@
              <div class="product_title"><%= product.title %></div>
           </h3>
           <div class="category_item__description_d">
-            <%= product.description[0..145]+'...' %>
+            <%= product.description[0..145].html_safe + '...' %>
           </div>
           <div class="category_item__description__last">
             <div class="category_item__description__details">

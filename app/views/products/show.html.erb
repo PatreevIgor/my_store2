@@ -12,6 +12,10 @@
     <div id="description_title">
       <%= @product.title %>
     </div>
+    <div id="description_price">
+      Цена - <%= @product.price %> бел.руб.
+    </div>
+    <br>
     <%= @product.description.html_safe %>
   </div>
 

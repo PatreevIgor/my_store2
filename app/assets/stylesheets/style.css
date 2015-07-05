@@ -596,3 +596,11 @@ padding-right: 10px;
   line-height:1;
 
 }
+
+#description_price{
+  color: red;
+  text-align: center;
+  font-family: Georgia, Times, “Times New Roman”, serif;
+  font-size: 150%;
+  line-height: 1;
+}

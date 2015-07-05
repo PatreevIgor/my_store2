@@ -551,15 +551,15 @@ float: left;}
 
 
 .busket_search_c{float: left;margin-left: 10px;width: 230px;}
-.busket{background: url(cart_img.gif) 8px 6px no-repeat;border: 1px solid #EAEAEA;color: #6A6A6A;font: normal 15px/30px Arial, Helvetica, sans-serif;height: 70px;padding: 6px 0 0 46px;}
+.busket{background: url(cart_img.gif) 8px 6px no-repeat;border: 1px solid #EAEAEA;color: #6A6A6A;font: normal 15px/30px Arial, Helvetica, sans-serif;height: 70px;padding: 6px 0 0 46px; padding-left: 66%;}
 .busket__title{color: #F2041F;margin-right: 7px;}
 
 .busket_image{
   position: absolute;
-  padding-left: 46%;
+  padding-left: 1%;
 }
 .busket_text{
-  padding-left: 80%;
+  padding-left: 40%;
 }
 
 .right{

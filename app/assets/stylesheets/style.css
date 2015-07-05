@@ -556,11 +556,10 @@ float: left;}
 
 .busket_image{
   position: absolute;
-  padding-left: 4px;
-  padding-top: 4px;
+  padding-left: 46%;
 }
 .busket_text{
-  padding-left: 55px;
+  padding-left: 80%;
 }
 
 .right{
@@ -597,4 +596,3 @@ padding-right: 10px;
   line-height:1;
 
 }
-

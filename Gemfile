@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
 gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'

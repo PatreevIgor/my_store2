@@ -1,14 +1,37 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+
+
+
+
+application = 'my_store2'
+login = 'patreewigor'
+$user = 'hosting_' + login
+$server = 'calcium.locum.ru'
+
+rvm_ruby_string = '2.1.5'
+deploy_to = "/home/#{ $user }/projects/#{ application }"
+unicorn_conf = "/etc/unicorn/#{ application }.#{ login }.rb"
+unicorn_pid = "/var/run/unicorn/#{ $user }/#{ application }.#{ login }.pid"
+unicorn_start_cmd = "(cd #{ deploy_to }/current; rvm use #{ rvm_ruby_string }"
+
+
+
+
+
+
+
+
+
+set :application, application
+set :repo_url, 'git@github.com:PatreevIgor/my_store2.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, deploy_to
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -20,7 +43,7 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
@@ -35,6 +58,14 @@ set :default_env, { path: "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/ga
 # set :keep_releases, 5
 
 namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do

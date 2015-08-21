@@ -28,9 +28,9 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: patreewi_inter45
-  username: patreewi_inter45
-  password: EnKxFB8K
+  database: patreewi_inter51
+  username: patreewi_inter51
+  password: TES4aU1us
 
   # host: 127.0.0.1
   # port: 3306

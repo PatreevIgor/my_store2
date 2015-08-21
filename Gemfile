@@ -7,6 +7,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-rvm'
 gem 'unicorn'
 
+gem 'non-stupid-digest-assets', '~> 1.0.4'
 # gem 'execjs'
 # gem 'therubyracer', :platforms => :ruby
 # gem 'bigdecimal'

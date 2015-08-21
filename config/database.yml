@@ -31,6 +31,8 @@ production:
   database: patreewi_inter51
   username: patreewi_inter51
   password: TES4aU1us
+  host: mysql6.locum.ru
+  socket: /var/run/mysqld/mysqld.sock
 
   # host: 127.0.0.1
   # port: 3306

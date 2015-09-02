@@ -30,7 +30,7 @@ production:
   encoding: utf8
   database: patreewi_inter29
   username: patreewi_inter29
-  password: YHkLzsuIaic
+  password: WuSlEpjxpNv
   host: mysql6.locum.ru
   socket: /var/run/mysqld/mysqld.sock
 

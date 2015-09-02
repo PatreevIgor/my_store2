@@ -1,2 +1,2 @@
-$('#cart').html("<div class='busket'><div class='busket_image'><a href='/carts/<%= session[:cart_id] %>'><img src='/assets/корзина.jpg' width='70' height='70'></a></div><div class='busket_text'><a href='/carts/<%= session[:cart_id] %>' class='busket__title'>Корзина:</a> <br> у Вас <% if @cart %><%= @cart.count_item_cart %><% end %> товаров</div></div>");
+$('#cart').html("<div class='busket'><div class='busket_image'><a href='/carts/<%= session[:cart_id] %>'><img src='/assets/cart.jpg' width='70' height='70'></a></div><div class='busket_text'><a href='/carts/<%= session[:cart_id] %>' class='busket__title'>Корзина:</a> <br> у Вас <% if @cart %><%= @cart.count_item_cart %><% end %> товаров</div></div>");
 alert('Товар добавлен в корзину');

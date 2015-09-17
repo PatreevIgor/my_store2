@@ -5,8 +5,8 @@ lock '3.4.0'
 
 
 
-application = 'intertron1'
-login = 'patreewigor1'
+application = 'inter'
+login = 'patreewigor2'
 $user = 'hosting_' + login
 $server = 'calcium.locum.ru'
 

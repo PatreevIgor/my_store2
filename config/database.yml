@@ -28,9 +28,9 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: patreewi_inter29
-  username: patreewi_inter29
-  password: WuSlEpjxpNv
+  database: patreewi_inter40
+  username: patreewi_inter40
+  password: IPmi2IglI6E
   host: mysql6.locum.ru
   socket: /var/run/mysqld/mysqld.sock
 
